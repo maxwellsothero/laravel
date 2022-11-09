@@ -26,14 +26,14 @@
                         <li class="nav-small-cap"><span class="hide-menu">Components</span></li>
                         <li class="sidebar-item"> <a class="sidebar-link has-arrow" href="javascript:void(0)"
                                 aria-expanded="false"><i data-feather="file-text" class="feather-icon"></i><span
-                                    class="hide-menu">Forms </span></a>
+                                    class="hide-menu">Clientes </span></a>
                             <ul aria-expanded="false" class="collapse  first-level base-level-line">
-                                <li class="sidebar-item"><a href="form-inputs.html" class="sidebar-link"><span
-                                            class="hide-menu"> Form Inputs
+                                <li class="sidebar-item"><a href="/cliente" class="sidebar-link"><span
+                                            class="hide-menu"> Listar Clientes
                                         </span></a>
                                 </li>
-                                <li class="sidebar-item"><a href="form-input-grid.html" class="sidebar-link"><span
-                                            class="hide-menu"> Form Grids
+                                <li class="sidebar-item"><a href="/cliente/novo" class="sidebar-link"><span
+                                            class="hide-menu"> Add Clientes
                                         </span></a>
                                 </li>
                                 <li class="sidebar-item"><a href="form-checkbox-radio.html" class="sidebar-link"><span

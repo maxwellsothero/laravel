@@ -29,3 +29,5 @@ Route::get('/cliente',[ClienteController::class,'list']);
 //any significa que poder ser to tipo GET OU POST http method
 Route::any('/cliente/novo',[ClienteController::class,'add']);
 
+Route::get('/excluir-cliente/{id}',[ClienteController::class,'remove']);
+

@@ -7,6 +7,9 @@
             <div class="card card-body">
                 <h1 class="text-center">listar clientes</h1>
                     <hr>
+                    @if (session('sucesso'))
+                        <div class="alert alert-success">{{session('sucesso')}}</div>
+                    @endif    
 
                 <table class="table table-striped">
                     <thead class="table-dark">
@@ -14,6 +17,11 @@
                             <th>#ID</th>
                             <th>Nome</th>
                             <th>Email</th>
+                            <th>CPF</th>
+                            <th>Endereço</th>
+                            <th>Ação</th>
+                            
+                            
                         </tr>
                     </thead>
                     <tbody class="table-hover">
@@ -24,6 +32,9 @@
                                         <td>{{$cli->email}}</td>
                                         <td>{{$cli->cpf}}</td>
                                         <td>{{$cli->endereco}}</td>
+                                        <td>
+                                <a href="/excluir-cliente/{{$cli->id}}" class="btn btn-outline-danger">Excluir</a>
+                            </td>
                                        
                                     </tr>
                                  @endforeach  
