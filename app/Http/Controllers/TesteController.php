@@ -7,7 +7,7 @@ use Illuminate\Support\Facades\DB;
 
 class TesteController extends Controller
 {
-    public function login()    
+     public function login()    
     {
         $alunos = ['maxwell','cecilia','laerte','jaques'];  
 
@@ -18,5 +18,5 @@ class TesteController extends Controller
             'categorias'=> $categorias,
         ]);//função do laravel
         
-    }
+    } 
 }

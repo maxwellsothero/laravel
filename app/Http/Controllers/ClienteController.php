@@ -42,4 +42,23 @@ class ClienteController extends Controller
         ClienteRepository::remove($id);
         return redirect('/cliente')->with('sucesso', 'Pronto,Cliente Excluido');
     }
+
+    public function update($id,Request $request)
+    {    
+        $nome = $request->input('nome');
+            if($nome){                
+                    $email = $request->input('email');
+                    $cpf = $request->input('cpf');
+                    $endereco = $request->input('endereco');                     
+                    
+                        ClienteRepository::update($id,$nome,$email,$cpf,$endereco);
+                            return redirect('/cliente')->with('sucesso', 'Pronto,Cliente Editado');
+        }else
+        {           
+                    $cliente = ClienteRepository::find($id);
+                        return view('cliente/edit',[
+                            'cliente' => $cliente,
+                        ]);
+        }        
+    }
 }

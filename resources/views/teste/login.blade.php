@@ -15,12 +15,6 @@
         <th>NOME</th>
     </thead>
     <tbody>          
-                @foreach ($categorias as $cat)
-                    <tr>
-                        <td>{{$cat->id}}</td>
-                        <td>{{$cat->nome}}</td>
-                    </tr>
-                @endforeach    
-          
+               
     </tbody>
 </table>

@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html dir="ltr" lang="en">
+<html dir="ltr" lang="pt-br">
 
 <head>
     <meta charset="utf-8">
@@ -10,7 +10,7 @@
     <meta name="author" content="">
     <!-- Favicon icon -->
     <link rel="icon" type="image/png" sizes="16x16" href="../assets/images/favicon.png">
-    <title>Adminmart Template - The Ultimate Multipurpose admin template</title>
+    <title>Gerenciamento</title>
     <!-- Custom CSS -->
     <link href="/assets/extra-libs/c3/c3.min.css" rel="stylesheet">
     <link href="/assets/libs/chartist/dist/chartist.min.css" rel="stylesheet">
