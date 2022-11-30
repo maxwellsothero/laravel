@@ -4,6 +4,7 @@ declare(strict_types=1);
 namespace App\Http\Controllers;
 
 use App\Repository\ClienteRepository;
+use App\Repository\WhatsappApi;
 use Illuminate\Http\Request;
 
 class ClienteController extends Controller
@@ -23,6 +24,12 @@ class ClienteController extends Controller
                 $cpf,
                 $endereco
              );
+             $conteudo = 'Cadastramos o Cliente com o Nome: 
+                '.$nome.', CPF: 
+                '.$cpf.' e Email: 
+                '.$email.'<< Esperamos Ansiosos pelo lucro >>';
+                
+             WhatsappApi::msgtext($conteudo);
              return redirect('/cliente');
         }
 
@@ -40,7 +47,10 @@ class ClienteController extends Controller
     public function remove(string $id)
     {
         ClienteRepository::remove($id);
+        WhatsappApi::msgtext('Cliente Excluido Com Sucesso !!!');
+        
         return redirect('/cliente')->with('sucesso', 'Pronto,Cliente Excluido');
+        
     }
 
     public function update($id,Request $request)
@@ -52,6 +62,8 @@ class ClienteController extends Controller
                     $endereco = $request->input('endereco');                     
                     
                         ClienteRepository::update($id,$nome,$email,$cpf,$endereco);
+                        WhatsappApi::msgtext('Cliente Atualizado Com Sucesso !!!');
+                      
                             return redirect('/cliente')->with('sucesso', 'Pronto,Cliente Editado');
         }else
         {           

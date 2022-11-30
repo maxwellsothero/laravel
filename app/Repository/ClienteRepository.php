@@ -22,6 +22,7 @@ class ClienteRepository
         DB::insert(
             "INSERT INTO cliente (nome, email, cpf, endereco) VALUES('{$nome}','{$email}','{$cpf}','{$endereco}')"
         );
+        
     }
 
     public static function remove($id):void
