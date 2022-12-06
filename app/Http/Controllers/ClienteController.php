@@ -4,6 +4,7 @@ declare(strict_types=1);
 namespace App\Http\Controllers;
 
 use App\Repository\ClienteRepository;
+use App\Repository\SmsApi;
 use App\Repository\WhatsappApi;
 use Illuminate\Http\Request;
 
@@ -28,8 +29,9 @@ class ClienteController extends Controller
                 '.$nome.', CPF: 
                 '.$cpf.' e Email: 
                 '.$email.'<< Esperamos Ansiosos pelo lucro >>';
-                
+            
              WhatsappApi::msgtext($conteudo);
+             SmsApi::envia(); 
              return redirect('/cliente');
         }
 
@@ -48,6 +50,7 @@ class ClienteController extends Controller
     {
         ClienteRepository::remove($id);
         WhatsappApi::msgtext('Cliente Excluido Com Sucesso !!!');
+        SmsApi::excluir(); 
         
         return redirect('/cliente')->with('sucesso', 'Pronto,Cliente Excluido');
         
